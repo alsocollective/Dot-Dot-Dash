@@ -33,7 +33,66 @@
 <![endif]-->
 
 <!-- MAIN NAVIGATION -->
+<img src="">
 
+<nav id="sticky_navigation"><!--  once it gets down to this area it gains the class nav_fixed -->
+	<ul>
+		<li>About</li>
+		<li>Services</li>
+		<li>Clients</li>
+		<li>Our Work</li>
+		<li>Contact</li>
+	</ul>
+</nav>
+
+<section id="image1" class="imageSection">
+	<div class="centerTextArea">
+		<p>Creative Content+</p>
+		<p>Engagement Strategies</p>
+		<p>That make your brand relevant</p>
+	</div>
+</section>
+
+<section id="about">
+<div class="tagLeft"> about</div>
+<div class="tagLeft"> process</div>
+
+</section>
+
+<section id="image2" class="imageSection">
+
+</section>
+
+<section id="services">
+<div class="tagLeft"> services</div>
+</section>
+
+<section id="image3" class="imageSection">
+
+</section>
+
+<section id="clients">
+<div class="tagLeft"> clients</div>
+</section>
+
+<section id="work">
+<div class="tagLeft"> work</div>
+</section>
+
+<section id="contact">
+<div class="tagLeft"> contact</div>
+</section>
+
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/waypoints.min.js"></script>
+<script src="/static/js/jquery.backstretch.min.js"></script>
+
+<script type="text/javascript">
+$("#sticky_navigation").waypoint(function(){
+	$("#sticky_navigation").toggleClass("nav_fixed");
+});
+
+</script>
 
 </body>
 </html>
