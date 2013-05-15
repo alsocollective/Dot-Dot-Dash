@@ -21,6 +21,8 @@
 
 		<!--Stylesheets-->
         <link rel="stylesheet" href="/static/css/normalize.min.css">
+		<link rel="stylesheet" href="/static/css/royalslider.css">
+		<link rel="stylesheet" href="/static/css/rs-default.css">
         <link rel="stylesheet" href="/static/css/main.css">
 
 <!-- We need to get the logo in here! -->
@@ -37,16 +39,16 @@
 
 <nav id="sticky_navigation"><!--  once it gets down to this area it gains the class nav_fixed -->
 	<ul>
-		<li>About</li>
-		<li>Services</li>
-		<li>Clients</li>
-		<li>Our Work</li>
-		<li>Contact</li>
+		<li id="aboutLink">About</li>
+		<li id="serviceLink">Services</li>
+		<li id="clientsLink">Clients</li>
+		<li id="ourWorkLink">Our Work</li>
+		<li id="contactLink">Contact</li>
 	</ul>
 </nav>
 
 <section id="image1" class="imageSection">
-	<div class="centerTextArea">
+	<div>
 		<p>Creative Content+</p>
 		<p>Engagement Strategies</p>
 		<p>That make your brand relevant</p>
@@ -54,9 +56,19 @@
 </section>
 
 <section id="about">
-<div class="tagLeft"> about</div>
-<div class="tagLeft"> process</div>
+	<div class="textArea">
+		<div class="tagLeft"> about</div>
+		<p>
+			Why don't we just give everybody a promotion and call it a night - 'Commander'? Sure. You'd be surprised how far a hug goes with Geordi, or Worf. Computer, lights up! What? We're not at all alike! The look in your eyes, I recognize it. You used to have it for me. A lot of things can change in twelve years, Admiral. Mr. Worf, you do remember how to fire phasers? They were just sucked into space. This should be interesting. Fate. It protects fools, little children, and ships named "Enterprise." That might've been one of the shortest assignments in the history of Starfleet. My oath is between Captain Kargan and myself. Your only concern is with how you obey my orders. Or do you prefer the rank of prisoner to that of lieutenant? Captain, why are we out here chasing comets? You did exactly what you had to do. You considered all your options, you tried every alternative and then you made the hard choice. Maybe we better talk out here; the observation lounge has turned into a swamp. Now, how the hell do we defeat an enemy that knows us better than we know ourselves? I've had twelve years to think about it. And if I had it to do over again, I would have grabbed the phaser and pointed it at you instead of them. and attack the Romulans. When has justice ever been as simple as a rule book? Not if I weaken first. Mr. Crusher, ready a collision course with the Borg ship. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation. How long can two people talk about nothing? Travel time to the nearest starbase? Some days you get the bear, and some days the bear gets you. We know you're dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. Besides, you look good in a dress. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet.
 
+		</p>
+	</div>
+	<div class="textArea">
+		<div class="tagLeft"> process</div>
+		<p>
+			The Enterprise computer system is controlled by three primary main processor cores, cross-linked with a redundant melacortz ramistat, fourteen kiloquad interface modules. Congratulations - you just destroyed the Enterprise. Fate protects fools, little children and ships named Enterprise. I'm afraid I still don't understand, sir. Commander William Riker of the Starship Enterprise. I'd like to think that I haven't changed those things, sir. You're going to be an interesting companion, Mr. Data. Yes, absolutely, I do indeed concur, wholeheartedly! This should be interesting. How long can two people talk about nothing? In all trust, there is the possibility for betrayal. My oath is between Captain Kargan and myself. Your only concern is with how you obey my orders. Or do you prefer the rank of prisoner to that of lieutenant? Yesterday I did not know how to eat gagh. Fate. It protects fools, little children, and ships named "Enterprise."
+		</p>
+	</div>
 </section>
 
 <section id="image2" class="imageSection">
@@ -64,7 +76,15 @@
 </section>
 
 <section id="services">
-<div class="tagLeft"> services</div>
+	<div class="textArea">
+		<div class="tagLeft"> services</div>
+		<p>
+			Your head is not an artifact! I recommend you don't fire until you're within 40,000 kilometers. What's a knock-out like you doing in a computer-generated gin joint like this? Did you come here for something in particular or just general Riker-bashing? The Enterprise computer system is controlled by three primary main processor cores, cross-linked with a redundant melacortz ramistat, fourteen kiloquad interface modules.
+		</p>
+	</div>
+	<div id="clientContainer">
+
+	</div>
 </section>
 
 <section id="image3" class="imageSection">
@@ -72,11 +92,44 @@
 </section>
 
 <section id="clients">
-<div class="tagLeft"> clients</div>
+	<div class="tagLeft"> clients</div>
+
+	<div id="clientContainer">
+		<div class="client">
+			<img src="/static/img/logo/pan.jpg">
+		</div><div class="client">
+			<img src="/static/img/logo/antica.jpg">
+		</div><div class="client">
+			<img src="/static/img/logo/canoe north.jpg">
+		</div><div class="client">
+			<img src="/static/img/logo/patch.jpg">
+		</div><div class="client">
+			<img src="/static/img/logo/david.jpg">
+		</div><div class="client">
+			<img src="/static/img/logo/earthday.jpg">
+		</div><div class="client">
+			<img src="/static/img/logo/earnes.jpg">
+		</div><div class="client">
+			<img src="/static/img/logo/chefs.jpg">
+		</div>
+	</div>
+
 </section>
 
 <section id="work">
-<div class="tagLeft"> work</div>
+	<div class="tagLeft"> work</div>
+
+	<div class="royalSlider rsDefault">
+		<div class="rsContent">
+			<h1>work 1</h1>
+		</div>
+		<div class="rsContent">
+			<h1>work 2</h1>
+		</div>
+		<div class="rsContent">
+			<h1>work 3</h1>
+		</div>
+	</div>
 </section>
 
 <section id="contact">
@@ -86,12 +139,42 @@
 <script src="/static/js/jquery.min.js"></script>
 <script src="/static/js/waypoints.min.js"></script>
 <script src="/static/js/jquery.backstretch.min.js"></script>
+<script src="/static/js/jquery.royalslider.min.js"></script>
 
 <script type="text/javascript">
-$("#sticky_navigation").waypoint(function(){
-	$("#sticky_navigation").toggleClass("nav_fixed");
-});
 
+    jQuery(document).ready(function($) {
+		$(".royalSlider").royalSlider({
+			arrowsNav: false,
+			keyboardNavEnabled: true,
+			controlNavigation: "none",
+			autoScaleSlider: false,
+			autoHeight: false
+		});
+
+		$("#sticky_navigation").waypoint(function(){
+			$("#sticky_navigation").toggleClass("nav_fixed");
+		});
+
+		$("#image1").backstretch("/static/img/landscape1.jpeg")
+		$("#image2").backstretch("/static/img/landscape2.jpg")
+
+		addEvent("aboutLink","about");
+		addEvent("serviceLink","services");
+		addEvent("clientsLink","clients");
+		addEvent("ourWorkLink","work");
+		addEvent("contactLink","contact");
+
+		function addEvent(link, endPoint){
+			document.getElementById(link).addEventListener('click', function(){goToThisEndPoint(endPoint);});
+		}
+
+		function goToThisEndPoint(location){
+			var top = $(document.getElementById(location)).offset().top;
+			var body = $("body,html");
+			$(body).animate({scrollTop : top-100},1000);
+		}
+	});
 </script>
 
 </body>
