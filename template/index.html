@@ -38,6 +38,7 @@
 <nav id="sticky_navigation"><!--  once it gets down to this area it gains the class nav_fixed -->
 	<img id="largeLogo" src="/static/img/logo.png">
 	<ul id="stickPoint">
+		<li class="squareLogoHide"><img id="smallLogo"src="/static/img/squareLogo.png"></li>
 		<li id="aboutLink">About</li>
 		<li id="serviceLink">Services</li>
 		<li id="clientsLink">Clients</li>
@@ -46,11 +47,11 @@
 	</ul>
 </nav>
 
-<section id="image1" class="imageSection">
-	<div>
-		<p>Creative Content+</p>
-		<p>Engagement Strategies</p>
-		<p>That make your brand relevant</p>
+<section id="image1" class="imageSection"><div>
+		<h2>Creative Content+</h2>
+		<h2>Engagement Strategies</h2>
+		<h2>That make your brand relevant</h2>
+		<span class="dashedLine"></span>
 	</div>
 </section>
 
@@ -59,9 +60,10 @@
 		<div class="tagLeft"> about</div>
 		<p>
 			Why don't we just give everybody a promotion and call it a night - 'Commander'? Sure. You'd be surprised how far a hug goes with Geordi, or Worf. Computer, lights up! What? We're not at all alike! The look in your eyes, I recognize it. You used to have it for me. A lot of things can change in twelve years, Admiral. Mr. Worf, you do remember how to fire phasers? They were just sucked into space. This should be interesting. Fate. It protects fools, little children, and ships named "Enterprise." That might've been one of the shortest assignments in the history of Starfleet. My oath is between Captain Kargan and myself. Your only concern is with how you obey my orders. Or do you prefer the rank of prisoner to that of lieutenant? Captain, why are we out here chasing comets? You did exactly what you had to do. You considered all your options, you tried every alternative and then you made the hard choice. Maybe we better talk out here; the observation lounge has turned into a swamp. Now, how the hell do we defeat an enemy that knows us better than we know ourselves? I've had twelve years to think about it. And if I had it to do over again, I would have grabbed the phaser and pointed it at you instead of them. and attack the Romulans. When has justice ever been as simple as a rule book? Not if I weaken first. Mr. Crusher, ready a collision course with the Borg ship. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation. How long can two people talk about nothing? Travel time to the nearest starbase? Some days you get the bear, and some days the bear gets you. We know you're dealing in stolen ore. But I wanna talk about the assassination attempt on Lieutenant Worf. Besides, you look good in a dress. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet.
-
+			<br>
+			<br>
+			<span class="dashedLine"></span>
 		</p>
-		<div class="dashedLine"></div>
 	</div>
 
 	<div class="textArea">
@@ -151,69 +153,7 @@
 <script src="/static/js/waypoints.min.js"></script>
 <script src="/static/js/jquery.backstretch.min.js"></script>
 <script src="/static/js/jquery.royalslider.min.js"></script>
-
-<script type="text/javascript">
-
-    jQuery(document).ready(function($) {
-		$(".royalSlider").royalSlider({
-			arrowsNav: false,
-			keyboardNavEnabled: true,
-			controlNavigation: "none",
-			autoScaleSlider: false,
-			autoHeight: false
-		});
-
-		setUpStaticLocationOfSticky();
-		$("#stickPoint").waypoint(function(){
-			$("#sticky_navigation").toggleClass("nav_fixed");
-		});
-
-		$("#image1").backstretch("/static/img/landscape1.jpeg");
-		$("#image2").backstretch("/static/img/landscape2.jpg");
-		$("#image3").backstretch("/static/img/landscape3.jpg");
-
-		addEvent("aboutLink","about");
-		addEvent("serviceLink","services");
-		addEvent("clientsLink","clients");
-		addEvent("ourWorkLink","work");
-		addEvent("contactLink","contact");
-	});
-
-	function addEvent(link, endPoint){
-		document.getElementById(link).addEventListener('click', function(){
-			goToThisEndPoint(endPoint);
-		});
-	}
-
-	function goToThisEndPoint(location){
-		var top = $(document.getElementById(location)).offset().top;
-		var body = $("body,html");
-		$(body).animate({scrollTop : top-100},1000);
-		setTimeout(function(){
-			//wait till after the scroll
-			setHashTag(location);
-		},1100);
-		//window.location.replace("#"+location);
-	}
-
-	function setHashTag(newTag){
-		var element = document.getElementById(newTag);
-		element.id = "";
-		window.location.replace("#"+newTag);
-		element.id = newTag;
-	}
-
-	function setUpStaticLocationOfSticky(){
-		var newElement = document.createElement("div");
-		newElement.id= "staticSticky";
-		var point = document.getElementById("stickPoint").firstChild;
-		var height = $(point).offset().top;
-		console.log(height);
-		newElement.style.height =  height +"px";
-		document.body.insertBefore(newElement,document.body.firstChild)
-		return newElement;
-	}
-</script>
+<script src="/static/js/script.js"></script>
 
 </body>
 </html>

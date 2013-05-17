@@ -51,7 +51,7 @@
    ========================================================================== */
 
 	body {
-		font-family: "ff-unit-web-pro", sans-serif;
+		font-family: Monospace;
 		padding:0;
 		margin:0;
 		height: 100%;
@@ -117,10 +117,8 @@
 	}
 
 	.dashedLine{
-		margin: 20px auto 0em auto;
-		width: 70%;
-		min-width: 20em;
-		max-width: 40em;
+		width: 100%;
+		display: block;
 
 		border-bottom-width: .1em;
 		border-bottom-style:dashed;
@@ -159,39 +157,70 @@
 		display: none;
 	}
 
-   nav ul {
-	   margin: 0 auto 0 auto;
-	   padding: 0.2em 0 0.2em 0;
-   }
-   nav ul li {
-	   display:inline;
-	   margin: 0 1em 0 0;
-   }
+	nav ul {
+		margin: 0 auto 0 auto;
+		padding: 0.2em 0 0.2em 0;
+	}
+	nav ul li {
+		display:inline-block;
+		vertical-align: top;
+		margin: 0 1em 0 0;
+		text-transform:capitalize;
+		text-transform:uppercase;
+	}
 
-   nav ul li a {
-	   font-size:2.2em;
-	   opacity:0.9;
-	   text-decoration:none;
-	   color:#333;
-   }
+	nav ul li a {
+		font-size:2.2em;
+		opacity:0.9;
+		text-decoration:none;
+		color:#333;
+	}
 
-   #nav .inactive:hover {
+	#nav .inactive:hover {
 		color:#FFF;
 		text-decoration:none;
 	}
 
+	#smallLogo {
+		width: 100px;
+		height: 100px;
+	}
+
+	.squareLogoHide {
+		height: 0px;
+		width: 0px;
+		overflow: hidden;
+		transition: height 1s, width 1s;
+		-moz-transition: height 1s, width 1s;
+		-webkit-transition: height 1s, width 1s;
+		-o-transition: height 1s, width 1s;
+	}
+	.squareLogo{
+		height: 100px;
+		width: 100px;
+
+		overflow: hidden;
+	}
+
+
+
 	#staticSticky{
 		position: absolute;
+		height: 100px;
 		width: 100px;
 	}
 
 /* == Images == */
 
-	#image1 div{
-		position: absolute;
-		width: 400px;
-		margin-left: 20%;
-		margin-top: 200px;
+	.imageSection div:first-of-type{
+		position: relative;
+		top: 215px;
+		width: 40em;
+		margin: 0 auto 0 auto;
+	}
+
+	.imageSection div h2{
+		margin-top: 0px;
 	}
 
 /* == Text area == */
