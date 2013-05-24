@@ -9,9 +9,9 @@ jQuery(document).ready(function($) {
 	});
 
 	//load image as the backgrounds
-	$("#image1").backstretch("../static/img/landscape1.jpeg");
-	$("#image2").backstretch("../static/img/landscape2.jpg");
-	$("#image3").backstretch("../static/img/landscape3.jpg");
+	$("#image1").backstretch("../static/img/landscape4.png");
+	$("#image2").backstretch("../static/img/landscape5.png");
+	$("#image3").backstretch("../static/img/landscape6.png");
 
 	//making the nav button
 	addEvent("aboutLink","about");
