@@ -51,7 +51,14 @@
    ========================================================================== */
 
 	body {
-		font-family: "letter-gothic-std", Monospace;
+		/*font-family: "letter-gothic-std", Monospace;*/
+		font-family: "prestige-elite-std",monospace;
+		/*font-family: "sax-mono",monospace;
+		font-family: "chennai-slab",serif;
+		font-family: "kulturista-web",serif;
+		font-family: "arvo",serif;
+		font-family: "ocr-a-std",sans-serif;*/
+		
 		padding:0;
 		margin:0;
 		height: 100%;
