@@ -45,9 +45,8 @@ jQuery(document).ready(function($) {
 /////////////////
 
 function addEvent(link, endPoint){
-	document.getElementById(link).addEventListener('click', function(){
+	document.getElementById(link).addEventListener('click', function(event){
 		event.preventDefault();
-
 		goToThisEndPoint(endPoint);
 	});
 }
