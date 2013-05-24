@@ -239,9 +239,10 @@
 
 	.imageSection div:first-of-type{
 		position: relative;
-		top: 215px;
+		top: 385px;
 		width: 40em;
 		margin: 0 auto 0 auto;
+		text-transform: uppercase;
 	}
 
 	.imageSection div h2{
