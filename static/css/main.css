@@ -211,6 +211,18 @@
 		width: 100px;
 	}
 
+	#stickPoint {
+		position: relative; /*this places it ontop of the logo to the left*/
+	}
+
+	#stickPoint li{
+		cursor: pointer;
+	}
+
+	#stickPoint li:hover{
+		background-color: #fcc;
+	}
+
 /* == Images == */
 
 	.imageSection div:first-of-type{

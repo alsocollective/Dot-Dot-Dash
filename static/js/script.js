@@ -23,22 +23,20 @@ jQuery(document).ready(function($) {
 	/*
 	making a div at a static location from top for sticky
 	*/
-	$("#largeLogo").one('load',function(){
-		$(setUpStaticLocationOfSticky()).waypoint(function(){
+	$("#largeLogo").one('load',function(){						//when the image loads do this
+		$(setUpStaticLocationOfSticky(false)).waypoint(function(){ 	//setUpStaticLocationOfSticky returns an emement
 			$("#sticky_navigation").toggleClass("nav_fixed");
 			$(".squareLogoHide").toggleClass("squareLogo");
 		})
 	}).each(function() {
   			if(this.complete) $(this).load();
+	}).error(function(){
+		$(setUpStaticLocationOfSticky(72)).waypoint(function(){ 	//we give an argument of a potential hight
+			$("#sticky_navigation").toggleClass("nav_fixed");
+			$(".squareLogoHide").toggleClass("squareLogo");
+		})
 	});
 
-	//centering text ontop of the images
-	//centerText(document.getElementById("image1"));
-
-	//adding things that need to be done when window is resized
-	window.addEventListener("resize",function(e){
-		//centerText(document.getElementById("image1"));
-	});
 });
 
 
@@ -72,28 +70,18 @@ function setHashTag(newTag){
 	element.id = newTag;
 }
 
-function setUpStaticLocationOfSticky(){
+function setUpStaticLocationOfSticky(didNotLoad){		//loaded can either come in as false, or a value
 	var newElement = document.createElement("div");
 	newElement.id= "staticSticky";
 
-	var logoHight = document.getElementById("largeLogo").height //$("#largeLogo").height();
-
+	if(!didNotLoad){
+		var logoHight = document.getElementById("largeLogo").height //$("#largeLogo").height();
+		console.log("this");
+		console.log(logoHight);
+	} else {
+		logoHight = didNotLoad;
+	}
 	newElement.style.marginTop =  (logoHight+100) +"px";
 	document.body.insertBefore(newElement,document.body.firstChild)
 	return newElement;
 }
-
-function centerText(parentElement){
-	//make sure that the div is the next element NO SPACES!!!
-	var childElement = parentElement.childNodes[0];
-//	var totalWidth = $(parentElement).width();
-	var totalHeight = $(parentElement).height();
-//	var width = $(childElement).width();
-	var height = $(childElement).height();
-//	childElement.style.marginLeft = ((totalWidth-width)/2)+"px"
-	childElement.style.marginTop = ((totalHeight-height)/2)+"px"
-}
-
-
-
-
