@@ -303,6 +303,9 @@
 		background-color: #222;
 		border-radius: 50%;
 		-webkit-border-radius: 50%;
+		background-image:url('../static/img/strategy.png');
+		background-position: center;
+		background-size: 100%;
 	}
 
 	.serviceCircle:hover{
